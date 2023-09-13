@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "text": "# New Product Batch Packaging Request",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yyeya3",
+        "columns": null
+      },
+      "id": "Field_00w147x"
+    },
+    {
+      "text": "**Product:** {{product_type}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_13qhvb6"
+    },
+    {
+      "text": "**Product Model:** {{model}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_1buqksw"
+    },
+    {
+      "text": "**Quantity:** {{batch}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_1u2zj1f"
+    },
+    {
+      "text": "**Due Date:** {{due_date}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_0lzop9b"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0834fp8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

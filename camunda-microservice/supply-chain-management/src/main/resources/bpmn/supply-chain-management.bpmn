@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.14.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.3.0" camunda:diagramRelationId="df4874bf-377e-4a1e-8237-06782b2d4e48">
+  <bpmn:collaboration id="supply-chain-management-diagram">
+    <bpmn:participant id="Participant_09jvar3" name="Participant" processRef="supply-chain-management" />
+  </bpmn:collaboration>
+  <bpmn:process id="supply-chain-management" name="Supply Chain Management" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_0qr8nds">{
+  "components": [
+    {
+      "text": "# Product Batch Configuration:",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1rjabru",
+        "columns": null
+      },
+      "id": "Field_08ct6hu"
+    },
+    {
+      "values": [
+        {
+          "label": "Mobile Devices",
+          "value": "Mobile"
+        },
+        {
+          "label": "Tablet Devices",
+          "value": "Tablet"
+        }
+      ],
+      "label": "Select Product ",
+      "type": "select",
+      "layout": {
+        "row": "Row_1eh1hve",
+        "columns": null
+      },
+      "id": "Field_0rti38l",
+      "key": "product_type",
+      "validate": {
+        "required": true
+      },
+      "defaultValue": "&lt;none&gt;"
+    },
+    {
+      "values": [
+        {
+          "label": "M10 (Mobile)",
+          "value": "M10"
+        },
+        {
+          "label": "M20 (Mobile)",
+          "value": "M20"
+        },
+        {
+          "label": "T10 (Tablet)",
+          "value": "T10"
+        },
+        {
+          "label": "T20 (Tablet)",
+          "value": "T20"
+        }
+      ],
+      "label": "Select Model",
+      "type": "select",
+      "layout": {
+        "row": "Row_1eh1hve",
+        "columns": null
+      },
+      "id": "Field_06y55uz",
+      "key": "model",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Batch Size",
+      "type": "number",
+      "layout": {
+        "row": "Row_1v9sq12",
+        "columns": null
+      },
+      "id": "Field_0wccecp",
+      "key": "batch",
+      "description": "** Enter a numeric value",
+      "validate": {
+        "required": true,
+        "min": 1
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1v9sq12",
+        "columns": null
+      },
+      "id": "Field_0qsqxxc",
+      "key": "due_date",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0y6gglj",
+        "columns": null
+      },
+      "id": "Field_16ns8at",
+      "key": "comments"
+    },
+    {
+      "text": "# Shipping Details",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_12co6of",
+        "columns": null
+      },
+      "id": "Field_0f6em7o"
+    },
+    {
+      "values": [
+        {
+          "label": "North America",
+          "value": "NA"
+        },
+        {
+          "label": "Asia Pacific",
+          "value": "APAC"
+        }
+      ],
+      "label": "Select Region",
+      "type": "select",
+      "layout": {
+        "row": "Row_1hi4f9c",
+        "columns": null
+      },
+      "id": "Field_0i6zlvx",
+      "key": "distributor_region",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Abc Sellers",
+          "value": "ABC"
+        },
+        {
+          "label": "Xyz Traders",
+          "value": "XYZ"
+        }
+      ],
+      "label": "Select Distributor",
+      "type": "select",
+      "layout": {
+        "row": "Row_0ygmm24",
+        "columns": null
+      },
+      "id": "Field_1i8p8nh",
+      "key": "distributor_name",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Address",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1t0ib0h",
+        "columns": null
+      },
+      "id": "Field_0orp2la",
+      "key": "distributor_address",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "batch-plan-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.3.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2vm5uu0">{
+  "components": [
+    {
+      "text": "# New Product Batch Inventory Request",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yyeya3",
+        "columns": null
+      },
+      "id": "Field_00w147x"
+    },
+    {
+      "text": "**Product:** {{product_type}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_13qhvb6"
+    },
+    {
+      "text": "**Product Model:** {{model}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_1buqksw"
+    },
+    {
+      "text": "**Quantity:** {{batch}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_1u2zj1f"
+    },
+    {
+      "text": "**Due Date:** {{due_date}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_044kfma"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Do you want to accept the order request?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1m57lc6",
+        "columns": null
+      },
+      "id": "Field_0emxrw3",
+      "key": "procure"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0834fp8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_0gkk0pp">{
+  "components": [
+    {
+      "text": "# New Product Batch Manufacture Request",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yyeya3",
+        "columns": null
+      },
+      "id": "Field_00w147x"
+    },
+    {
+      "text": "**Product:** {{product_type}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_13qhvb6"
+    },
+    {
+      "text": "**Product Model:** {{model}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_1buqksw"
+    },
+    {
+      "text": "**Quantity:** {{batch}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_1u2zj1f"
+    },
+    {
+      "text": "**Due Date:** {{due_date}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_0sgrh6t"
+    },
+    {
+      "text": "# Inventory Items are Available",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_02api19",
+        "columns": null
+      },
+      "id": "Field_1yg0pc7"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Do you want to accept the order request?",
+      "type": "select",
+      "layout": {
+        "row": "Row_15l4d0l",
+        "columns": null
+      },
+      "id": "Field_0emxrw3",
+      "key": "procure"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0834fp8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_31nvn2r">{
+  "components": [
+    {
+      "text": "# New Product Batch Packaging Request",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yyeya3",
+        "columns": null
+      },
+      "id": "Field_00w147x"
+    },
+    {
+      "text": "**Product:** {{product_type}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_13qhvb6"
+    },
+    {
+      "text": "**Product Model:** {{model}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_1buqksw"
+    },
+    {
+      "text": "**Quantity:** {{batch}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_1u2zj1f"
+    },
+    {
+      "text": "**Due Date:** {{due_date}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_0lzop9b"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0834fp8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1e3m2u8">{
+  "components": [
+    {
+      "text": "# New Product Batch Shipping Request",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yyeya3",
+        "columns": null
+      },
+      "id": "Field_00w147x"
+    },
+    {
+      "text": "**Product:** {{product_type}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_13qhvb6"
+    },
+    {
+      "text": "**Product Model:** {{model}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_1buqksw"
+    },
+    {
+      "text": "**Quantity:** {{batch}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_1u2zj1f"
+    },
+    {
+      "text": "**Due Date:** {{due_date}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_09f1luw"
+    },
+    {
+      "text": "# Shipping Details:",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_03gikyt",
+        "columns": null
+      },
+      "id": "Field_0zq7zsj"
+    },
+    {
+      "text": "**Shipping Region:** {{distributor_region}} ",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1wt401s",
+        "columns": null
+      },
+      "id": "Field_01vdkak"
+    },
+    {
+      "text": "**Distributor Name:** {{distributor_name}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zu06e4",
+        "columns": null
+      },
+      "id": "Field_1cwi41q"
+    },
+    {
+      "text": "**Distributor Address:** {{distributor_address}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a24zs9",
+        "columns": null
+      },
+      "id": "Field_127imu5"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0834fp8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_12x2e5z">
+      <bpmn:lane id="Lane_187n6wt" name="Planning">
+        <bpmn:flowNodeRef>Activity_1i768cu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1p9qnry" name="Inventory">
+        <bpmn:flowNodeRef>Activity_0e23xd8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0viq0aa</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_088m1gu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1rd6ojd</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1pst11p" name="Manufacture">
+        <bpmn:flowNodeRef>Activity_1cqtb22</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1k9hkh3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_12f6nn7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1myjf17</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0orofq2" name="Packaging">
+        <bpmn:flowNodeRef>Activity_1rhputk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1mkhqdm</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0srzscv" name="Shipping">
+        <bpmn:flowNodeRef>Activity_0lea02u</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0efzt3q</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0d2e0mr</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:userTask id="Activity_0e23xd8" name="Receive Inventory Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2vm5uu0" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_150qgxz</bpmn:incoming>
+      <bpmn:outgoing>Flow_1x9vu4d</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1i768cu" name="Plan for batch">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0qr8nds" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0qoy6b8</bpmn:incoming>
+      <bpmn:outgoing>Flow_150qgxz</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_0qoy6b8</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_07lwm98" sourceRef="Activity_12f6nn7" targetRef="Activity_1rhputk" />
+    <bpmn:sequenceFlow id="Flow_0r7jyv6" sourceRef="Activity_0viq0aa" targetRef="Activity_1cqtb22" />
+    <bpmn:sequenceFlow id="Flow_150qgxz" sourceRef="Activity_1i768cu" targetRef="Activity_0e23xd8" />
+    <bpmn:sequenceFlow id="Flow_0qoy6b8" sourceRef="StartEvent_1" targetRef="Activity_1i768cu" />
+    <bpmn:sequenceFlow id="Flow_1grbpgd" sourceRef="Activity_1rhputk" targetRef="Activity_1mkhqdm" />
+    <bpmn:sequenceFlow id="Flow_07m0cgv" sourceRef="Activity_1mkhqdm" targetRef="Activity_0lea02u" />
+    <bpmn:sequenceFlow id="Flow_0vo2ow6" sourceRef="Activity_0lea02u" targetRef="Activity_0efzt3q" />
+    <bpmn:sequenceFlow id="Flow_0gft5ij" sourceRef="Activity_0efzt3q" targetRef="Event_0d2e0mr" />
+    <bpmn:serviceTask id="Activity_0viq0aa" name="Collect Resources">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="inventory" retries="3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_18iiuk6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0r7jyv6</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_088m1gu">
+      <bpmn:incoming>Flow_1x9vu4d</bpmn:incoming>
+      <bpmn:outgoing>Flow_18iiuk6</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0501kpd</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1x9vu4d" sourceRef="Activity_0e23xd8" targetRef="Gateway_088m1gu" />
+    <bpmn:sequenceFlow id="Flow_18iiuk6" sourceRef="Gateway_088m1gu" targetRef="Activity_0viq0aa">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=procure = "Yes"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0501kpd" sourceRef="Gateway_088m1gu" targetRef="Event_1rd6ojd">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=procure = "No"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0q8pcvg" sourceRef="Activity_1cqtb22" targetRef="Gateway_1k9hkh3" />
+    <bpmn:sequenceFlow id="Flow_0bs300g" sourceRef="Gateway_1k9hkh3" targetRef="Activity_12f6nn7">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=procure = "Yes"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_1cqtb22" name="Receive Manufacture Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0gkk0pp" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0r7jyv6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0q8pcvg</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_1k9hkh3">
+      <bpmn:incoming>Flow_0q8pcvg</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bs300g</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1m63chz</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Activity_12f6nn7" name="Manufacture">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="manufacture" retries="3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0bs300g</bpmn:incoming>
+      <bpmn:outgoing>Flow_07lwm98</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1m63chz" sourceRef="Gateway_1k9hkh3" targetRef="Event_1myjf17">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=procure = "No"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_1rhputk" name="Receive Packaging Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_31nvn2r" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_07lwm98</bpmn:incoming>
+      <bpmn:outgoing>Flow_1grbpgd</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_1mkhqdm" name="Package">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="package" retries="3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1grbpgd</bpmn:incoming>
+      <bpmn:outgoing>Flow_07m0cgv</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_0lea02u" name="Receive Shipping Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1e3m2u8" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_07m0cgv</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vo2ow6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_0efzt3q" name="Ship to Sestination">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="shipping" retries="3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0vo2ow6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0gft5ij</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1myjf17" name="End">
+      <bpmn:incoming>Flow_1m63chz</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_1rd6ojd" name="End">
+      <bpmn:incoming>Flow_0501kpd</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_0d2e0mr" name="End">
+      <bpmn:incoming>Flow_0gft5ij</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:textAnnotation id="TextAnnotation_1gbfksf">
+      <bpmn:text>Yes / No</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1om5epe" sourceRef="Gateway_1k9hkh3" targetRef="TextAnnotation_1gbfksf" />
+    <bpmn:textAnnotation id="TextAnnotation_0gbr4oc">
+      <bpmn:text>Yes / No</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_044omjx" sourceRef="Gateway_088m1gu" targetRef="TextAnnotation_0gbr4oc" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="supply-chain-management-diagram">
+      <bpmndi:BPMNShape id="Participant_09jvar3_di" bpmnElement="Participant_09jvar3" isHorizontal="true">
+        <dc:Bounds x="170" y="80" width="1360" height="690" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_187n6wt_di" bpmnElement="Lane_187n6wt" isHorizontal="true">
+        <dc:Bounds x="200" y="80" width="1330" height="150" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1p9qnry_di" bpmnElement="Lane_1p9qnry" isHorizontal="true">
+        <dc:Bounds x="200" y="230" width="1330" height="150" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1pst11p_di" bpmnElement="Lane_1pst11p" isHorizontal="true">
+        <dc:Bounds x="200" y="380" width="1330" height="140" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0orofq2_di" bpmnElement="Lane_0orofq2" isHorizontal="true">
+        <dc:Bounds x="200" y="520" width="1330" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0srzscv_di" bpmnElement="Lane_0srzscv" isHorizontal="true">
+        <dc:Bounds x="200" y="640" width="1330" height="130" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1gbfksf_di" bpmnElement="TextAnnotation_1gbfksf">
+        <dc:Bounds x="780" y="400" width="99.99156545209178" height="29.984817813765183" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0gbr4oc_di" bpmnElement="TextAnnotation_0gbr4oc">
+        <dc:Bounds x="500" y="250" width="99.99156545209178" height="29.984817813765183" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_022h5w0_di" bpmnElement="Activity_0e23xd8">
+        <dc:Bounds x="310" y="260" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10xpywk_di" bpmnElement="Activity_1i768cu">
+        <dc:Bounds x="310" y="100" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="232" y="122" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="238" y="165" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bisylw_di" bpmnElement="Activity_0viq0aa">
+        <dc:Bounds x="580" y="260" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_088m1gu_di" bpmnElement="Gateway_088m1gu" isMarkerVisible="true">
+        <dc:Bounds x="455" y="275" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1klbmjp_di" bpmnElement="Activity_1cqtb22">
+        <dc:Bounds x="580" y="410" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1k9hkh3_di" bpmnElement="Gateway_1k9hkh3" isMarkerVisible="true">
+        <dc:Bounds x="745" y="425" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xve92a_di" bpmnElement="Activity_12f6nn7">
+        <dc:Bounds x="860" y="410" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1n4snw7_di" bpmnElement="Activity_1rhputk">
+        <dc:Bounds x="860" y="540" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_192kijd_di" bpmnElement="Activity_1mkhqdm">
+        <dc:Bounds x="1070" y="540" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0394x7c_di" bpmnElement="Activity_0lea02u">
+        <dc:Bounds x="1070" y="670" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fem6nh_di" bpmnElement="Activity_0efzt3q">
+        <dc:Bounds x="1280" y="670" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1myjf17_di" bpmnElement="Event_1myjf17">
+        <dc:Bounds x="1442" y="442" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1450" y="485" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1rd6ojd_di" bpmnElement="Event_1rd6ojd">
+        <dc:Bounds x="1432" y="282" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1440" y="325" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0d2e0mr_di" bpmnElement="Event_0d2e0mr">
+        <dc:Bounds x="1452" y="692" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1460" y="668" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1om5epe_di" bpmnElement="Association_1om5epe">
+        <di:waypoint x="786" y="441" />
+        <di:waypoint x="804" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_044omjx_di" bpmnElement="Association_044omjx">
+        <di:waypoint x="497" y="292" />
+        <di:waypoint x="520" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_07lwm98_di" bpmnElement="Flow_07lwm98">
+        <di:waypoint x="910" y="490" />
+        <di:waypoint x="910" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r7jyv6_di" bpmnElement="Flow_0r7jyv6">
+        <di:waypoint x="630" y="340" />
+        <di:waypoint x="630" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_150qgxz_di" bpmnElement="Flow_150qgxz">
+        <di:waypoint x="360" y="180" />
+        <di:waypoint x="360" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qoy6b8_di" bpmnElement="Flow_0qoy6b8">
+        <di:waypoint x="268" y="140" />
+        <di:waypoint x="310" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1grbpgd_di" bpmnElement="Flow_1grbpgd">
+        <di:waypoint x="960" y="580" />
+        <di:waypoint x="1070" y="580" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_07m0cgv_di" bpmnElement="Flow_07m0cgv">
+        <di:waypoint x="1120" y="620" />
+        <di:waypoint x="1120" y="670" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vo2ow6_di" bpmnElement="Flow_0vo2ow6">
+        <di:waypoint x="1170" y="710" />
+        <di:waypoint x="1280" y="710" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gft5ij_di" bpmnElement="Flow_0gft5ij">
+        <di:waypoint x="1380" y="710" />
+        <di:waypoint x="1452" y="710" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x9vu4d_di" bpmnElement="Flow_1x9vu4d">
+        <di:waypoint x="410" y="300" />
+        <di:waypoint x="455" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18iiuk6_di" bpmnElement="Flow_18iiuk6">
+        <di:waypoint x="505" y="300" />
+        <di:waypoint x="580" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0501kpd_di" bpmnElement="Flow_0501kpd">
+        <di:waypoint x="480" y="275" />
+        <di:waypoint x="480" y="240" />
+        <di:waypoint x="1450" y="240" />
+        <di:waypoint x="1450" y="282" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q8pcvg_di" bpmnElement="Flow_0q8pcvg">
+        <di:waypoint x="680" y="450" />
+        <di:waypoint x="745" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bs300g_di" bpmnElement="Flow_0bs300g">
+        <di:waypoint x="795" y="450" />
+        <di:waypoint x="860" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1m63chz_di" bpmnElement="Flow_1m63chz">
+        <di:waypoint x="770" y="425" />
+        <di:waypoint x="770" y="390" />
+        <di:waypoint x="1460" y="390" />
+        <di:waypoint x="1460" y="442" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

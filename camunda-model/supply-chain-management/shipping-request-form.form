@@ -1,0 +1,103 @@
+{
+  "components": [
+    {
+      "text": "# New Product Batch Shipping Request",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yyeya3",
+        "columns": null
+      },
+      "id": "Field_00w147x"
+    },
+    {
+      "text": "**Product:** {{product_type}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_13qhvb6"
+    },
+    {
+      "text": "**Product Model:** {{model}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_18ixo6l",
+        "columns": null
+      },
+      "id": "Field_1buqksw"
+    },
+    {
+      "text": "**Quantity:** {{batch}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_1u2zj1f"
+    },
+    {
+      "text": "**Due Date:** {{due_date}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0df22oi",
+        "columns": null
+      },
+      "id": "Field_09f1luw"
+    },
+    {
+      "text": "# Shipping Details:",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_03gikyt",
+        "columns": null
+      },
+      "id": "Field_0zq7zsj"
+    },
+    {
+      "text": "**Shipping Region:** {{distributor_region}} ",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1wt401s",
+        "columns": null
+      },
+      "id": "Field_01vdkak"
+    },
+    {
+      "text": "**Distributor Name:** {{distributor_name}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zu06e4",
+        "columns": null
+      },
+      "id": "Field_1cwi41q"
+    },
+    {
+      "text": "**Distributor Address:** {{distributor_address}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a24zs9",
+        "columns": null
+      },
+      "id": "Field_127imu5"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0834fp8",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

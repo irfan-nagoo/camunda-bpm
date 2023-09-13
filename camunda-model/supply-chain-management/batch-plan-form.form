@@ -1,0 +1,187 @@
+{
+  "components": [
+    {
+      "text": "# Product Batch Configuration:",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1rjabru",
+        "columns": null
+      },
+      "id": "Field_08ct6hu"
+    },
+    {
+      "values": [
+        {
+          "label": "Mobile Devices",
+          "value": "Mobile"
+        },
+        {
+          "label": "Tablet Devices",
+          "value": "Tablet"
+        }
+      ],
+      "label": "Select Product ",
+      "type": "select",
+      "layout": {
+        "row": "Row_1eh1hve",
+        "columns": null
+      },
+      "id": "Field_0rti38l",
+      "key": "product_type",
+      "validate": {
+        "required": true
+      },
+      "defaultValue": "<none>"
+    },
+    {
+      "values": [
+        {
+          "label": "M10 (Mobile)",
+          "value": "M10"
+        },
+        {
+          "label": "M20 (Mobile)",
+          "value": "M20"
+        },
+        {
+          "label": "T10 (Tablet)",
+          "value": "T10"
+        },
+        {
+          "label": "T20 (Tablet)",
+          "value": "T20"
+        }
+      ],
+      "label": "Select Model",
+      "type": "select",
+      "layout": {
+        "row": "Row_1eh1hve",
+        "columns": null
+      },
+      "id": "Field_06y55uz",
+      "key": "model",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Batch Size",
+      "type": "number",
+      "layout": {
+        "row": "Row_1v9sq12",
+        "columns": null
+      },
+      "id": "Field_0wccecp",
+      "key": "batch",
+      "description": "** Enter a numeric value",
+      "validate": {
+        "required": true,
+        "min": 1
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1v9sq12",
+        "columns": null
+      },
+      "id": "Field_0qsqxxc",
+      "key": "due_date",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0y6gglj",
+        "columns": null
+      },
+      "id": "Field_16ns8at",
+      "key": "comments"
+    },
+    {
+      "text": "# Shipping Details",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_12co6of",
+        "columns": null
+      },
+      "id": "Field_0f6em7o"
+    },
+    {
+      "values": [
+        {
+          "label": "North America",
+          "value": "NA"
+        },
+        {
+          "label": "Asia Pacific",
+          "value": "APAC"
+        }
+      ],
+      "label": "Select Region",
+      "type": "select",
+      "layout": {
+        "row": "Row_1hi4f9c",
+        "columns": null
+      },
+      "id": "Field_0i6zlvx",
+      "key": "distributor_region",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Abc Sellers",
+          "value": "ABC"
+        },
+        {
+          "label": "Xyz Traders",
+          "value": "XYZ"
+        }
+      ],
+      "label": "Select Distributor",
+      "type": "select",
+      "layout": {
+        "row": "Row_0ygmm24",
+        "columns": null
+      },
+      "id": "Field_1i8p8nh",
+      "key": "distributor_name",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Address",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1t0ib0h",
+        "columns": null
+      },
+      "id": "Field_0orp2la",
+      "key": "distributor_address",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "batch-plan-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.3.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}
