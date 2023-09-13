@@ -41,6 +41,10 @@
       <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
     </dependency>
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-openapi</artifactId>
+    </dependency>
+    <dependency>
       <groupId>io.quarkiverse.zeebe</groupId>
       <artifactId>quarkus-zeebe</artifactId>
       <version>1.1.0</version>
