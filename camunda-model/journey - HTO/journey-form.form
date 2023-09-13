@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Bike",
+          "value": "Bike"
+        },
+        {
+          "label": "Car",
+          "value": "Car"
+        }
+      ],
+      "label": "Preparing for Journey by?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1qdwp29",
+        "columns": null
+      },
+      "id": "Field_1bmod2r",
+      "key": "mode",
+      "defaultValue": "<none>"
+    }
+  ],
+  "type": "default",
+  "id": "journey-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

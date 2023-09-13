@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Continue Journey?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_13wyp3m",
+        "columns": null
+      },
+      "id": "Field_0r1kgll",
+      "key": "continue"
+    }
+  ],
+  "type": "default",
+  "id": "continue-journey-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}
