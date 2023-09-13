@@ -1,0 +1,35 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Does candidate qualify?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1rbckoa",
+        "columns": null
+      },
+      "id": "Field_0colai3",
+      "key": "purchase",
+      "defaultValue": "No",
+      "searchable": false
+    }
+  ],
+  "type": "default",
+  "id": "purchase-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}
