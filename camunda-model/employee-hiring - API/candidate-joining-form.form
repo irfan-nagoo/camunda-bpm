@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "text": "# Weclome to Abc, Inc",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1v01s1e",
+        "columns": null
+      },
+      "id": "Field_0ih4a3v"
+    },
+    {
+      "values": [
+        {
+          "label": "Positive",
+          "value": "Positive"
+        },
+        {
+          "label": "Negative",
+          "value": "Negative"
+        },
+        {
+          "label": "Neutral",
+          "value": "Neutral"
+        }
+      ],
+      "label": "How was your onboarding Experience?",
+      "type": "select",
+      "layout": {
+        "row": "Row_0n16f9b",
+        "columns": null
+      },
+      "id": "Field_146q2p8",
+      "key": "field_1gywa7x"
+    },
+    {
+      "text": "# Good Luck ahead!",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ajuczq",
+        "columns": null
+      },
+      "id": "Field_1gdjs2p"
+    },
+    {
+      "action": "submit",
+      "label": "Finish",
+      "type": "button",
+      "layout": {
+        "row": "Row_0hcn8ux",
+        "columns": null
+      },
+      "id": "Field_0bjwvct",
+      "key": "field_0na2dez"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1kzxraj",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

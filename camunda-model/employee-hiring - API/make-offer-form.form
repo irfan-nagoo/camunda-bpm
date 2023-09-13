@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "label": "Offer Title",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pdj5h2",
+        "columns": null
+      },
+      "id": "Field_1s9mif2",
+      "key": "title"
+    },
+    {
+      "label": "Offer Details",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1114zkk",
+        "columns": null
+      },
+      "id": "Field_1d9swva",
+      "key": "offer"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1a2314i",
+        "columns": null
+      },
+      "id": "Field_1eflh8t",
+      "key": "field_0m8flw6"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1wxorpr",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

@@ -1,0 +1,65 @@
+{
+  "components": [
+    {
+      "text": "# {{title}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1im5oo0",
+        "columns": null
+      },
+      "id": "Field_10evynz"
+    },
+    {
+      "text": "{{offer}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0mghmwa",
+        "columns": null
+      },
+      "id": "Field_049oj0n"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Do you want to accept the offer?",
+      "type": "select",
+      "layout": {
+        "row": "Row_13dy1ux",
+        "columns": null
+      },
+      "id": "Field_09exk6p",
+      "key": "accepted",
+      "defaultValue": "No"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_09lv76h",
+        "columns": 7
+      },
+      "id": "Field_1lrt9yj",
+      "key": "field_00g4mt0"
+    }
+  ],
+  "type": "default",
+  "id": "Form_03uneyz",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

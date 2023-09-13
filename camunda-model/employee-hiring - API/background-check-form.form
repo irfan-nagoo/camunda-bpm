@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Do you want to initiate Background Check for the candidate?",
+      "type": "select",
+      "layout": {
+        "row": "Row_09nri1s",
+        "columns": null
+      },
+      "id": "Field_1xcqbvj",
+      "key": "bgClear"
+    }
+  ],
+  "type": "default",
+  "id": "Form_16pnlfd",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

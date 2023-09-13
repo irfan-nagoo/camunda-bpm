@@ -1,0 +1,104 @@
+{
+  "components": [
+    {
+      "text": "# {{name}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x0q7xq",
+        "columns": null
+      },
+      "id": "Field_0har5t2"
+    },
+    {
+      "text": "Email: {{email}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1gmb8xj",
+        "columns": null
+      },
+      "id": "Field_0g3syqe"
+    },
+    {
+      "text": "Phone: {{phone}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1gmb8xj",
+        "columns": null
+      },
+      "id": "Field_0sotdp6"
+    },
+    {
+      "text": "Permanent Address: {{address}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1yaoakm",
+        "columns": null
+      },
+      "id": "Field_07iyyc1"
+    },
+    {
+      "text": "Period Notice : {{notice}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_02n4ger",
+        "columns": null
+      },
+      "id": "Field_1nw5e72"
+    },
+    {
+      "text": "Profile:\n\n{{resume}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xqwij9",
+        "columns": null
+      },
+      "id": "Field_0z2qbz5"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Does the candidate qualify?",
+      "type": "select",
+      "layout": {
+        "row": "Row_13hefor",
+        "columns": null
+      },
+      "id": "Field_07gv9qd",
+      "key": "qualified"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1aml7za",
+        "columns": null
+      },
+      "id": "Field_1w3dwtl",
+      "key": "field_1fhzgrm"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0fks5jx",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

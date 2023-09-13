@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Did the candidate qualify the interview process?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1tlhr5h",
+        "columns": null
+      },
+      "id": "Field_1iqv528",
+      "key": "qualified"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0cbaoht",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

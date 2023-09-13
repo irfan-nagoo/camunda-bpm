@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "text": "# List of documents to be emailed to hr@abc.com :\n\n1. Past 3 months salary slip\n2. Experience letter of all employers\n3. Id proof\n4. ....",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_12eydvv",
+        "columns": null
+      },
+      "id": "Field_0tqgoy0"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Did you email above mentioned documents?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1m8hrt5",
+        "columns": null
+      },
+      "id": "Field_1jtteyk",
+      "key": "field_142qcgr"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1n8ck61",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

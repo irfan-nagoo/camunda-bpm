@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Has candidate cleared Background Check?",
+      "type": "select",
+      "layout": {
+        "row": "Row_06t7fzd",
+        "columns": null
+      },
+      "id": "Field_1woul6k",
+      "key": "bgClear",
+      "defaultValue": "Yes"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0bt7no2",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

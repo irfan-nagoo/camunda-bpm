@@ -1,0 +1,183 @@
+{
+  "components": [
+    {
+      "text": "# {{title}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1y1fr68",
+        "columns": null
+      },
+      "id": "Field_1xzta80"
+    },
+    {
+      "text": "{{jd}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1fggt2v",
+        "columns": null
+      },
+      "id": "Field_0jzkjza"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "label": "Do you want to apply?",
+      "type": "select",
+      "layout": {
+        "row": "Row_18v60f7",
+        "columns": null
+      },
+      "id": "Field_0jc3dcb",
+      "key": "apply",
+      "defaultValue": "No"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ojvyax",
+        "columns": null
+      },
+      "id": "Field_15tp00r",
+      "key": "name",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1hlavxj",
+        "columns": null
+      },
+      "id": "Field_1gbnko2",
+      "key": "email",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Phone Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1hlavxj",
+        "columns": null
+      },
+      "id": "Field_03b1iy8",
+      "key": "phone",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Permanent Address",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_10xj3hb",
+        "columns": null
+      },
+      "id": "Field_0jiy7z7",
+      "key": "address",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Immediate",
+          "value": "Immediate"
+        },
+        {
+          "label": "1 Month",
+          "value": "1 Month"
+        },
+        {
+          "label": "2 Months",
+          "value": "2 Months"
+        },
+        {
+          "label": "3 Months",
+          "value": "3 Months"
+        }
+      ],
+      "label": "Notice Period",
+      "type": "select",
+      "layout": {
+        "row": "Row_1kxbfrn",
+        "columns": null
+      },
+      "id": "Field_1e7yl0n",
+      "key": "notice",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Resume",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_18kpirn",
+        "columns": null
+      },
+      "id": "Field_0tuo195",
+      "key": "resume",
+      "description": "Put your work experience details here",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_12lbkrg",
+        "columns": null
+      },
+      "id": "Field_1fg3nrb",
+      "key": "field_13kk4fh",
+      "conditional": {
+        "hide": "=apply = \"No\""
+      }
+    }
+  ],
+  "type": "default",
+  "id": "apply-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}

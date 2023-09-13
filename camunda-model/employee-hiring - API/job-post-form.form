@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "label": "Job Title",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tozg9m",
+        "columns": null
+      },
+      "id": "Field_1b40edc",
+      "key": "title"
+    },
+    {
+      "label": "Job Description",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1fokymu",
+        "columns": null
+      },
+      "id": "Field_0ny6g5x",
+      "key": "jd"
+    },
+    {
+      "action": "submit",
+      "label": "Post Job",
+      "type": "button",
+      "layout": {
+        "row": "Row_1vuz93n",
+        "columns": null
+      },
+      "id": "Field_06su8v5",
+      "key": "field_16fketi"
+    }
+  ],
+  "type": "default",
+  "id": "Form_13e362p",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "schemaVersion": 10
+}
